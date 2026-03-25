@@ -1,7 +1,7 @@
 // ─── Career Clarity Configuration ───
 const CONFIG = {
   // Gemini API
-  GEMINI_API_KEY: 'AIzaSyDNwr4R_hHGZRClQPK6NBh4VETAZaEYpbM',
+  GEMINI_API_KEY: 'AIzaSyBs2YRu_YJ2iK_plvsu7Ta16Thiwmd1j8k',
   GEMINI_MODEL: 'gemini-3-flash-preview',
   GEMINI_ENDPOINT: 'https://generativelanguage.googleapis.com/v1beta/models',
 
