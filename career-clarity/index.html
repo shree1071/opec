@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Career Clarity — Stop guessing your future. AI-powered career discovery using the OPEC methodology.">
+  <title>Career Clarity — OPEC Methodology</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Import Maps -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai"
+      }
+    }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/interview.css">
+  <link rel="stylesheet" href="css/simulator.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#/" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Career Clarity</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#/" class="nav-link" data-page="landing">Home</a>
+        <a href="#/dashboard" class="nav-link" data-page="dashboard">Dashboard</a>
+        <a href="#/chat" class="nav-link" data-page="chat">OPEC Chat</a>
+        <a href="#/interview" class="nav-link" data-page="interview">3D Interview</a>
+        <a href="#/simulator" class="nav-link" data-page="simulator">Simulator</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Container -->
+  <main id="app" class="app-container"></main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts (ES Modules) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

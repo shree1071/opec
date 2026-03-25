@@ -1,0 +1,196 @@
+/* ═══════════════════════════════════════════
+   Dashboard Styles
+   ═══════════════════════════════════════════ */
+
+.dashboard {
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Greeting ─── */
+.dash-greeting {
+  margin-bottom: var(--space-3xl);
+}
+
+.dash-greeting-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--coffee);
+  margin-bottom: var(--space-xs);
+}
+
+.dash-greeting-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.dash-greeting-title span {
+  color: var(--accent);
+}
+
+.dash-greeting-subtitle {
+  font-size: 1rem;
+  color: var(--coffee);
+  margin-top: var(--space-sm);
+}
+
+/* ─── Feature Cards Grid ─── */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.dash-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(212,197,178,0.15);
+  transition: all 0.4s var(--ease-out);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.dash-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out);
+}
+
+.dash-card:nth-child(1)::after { background: linear-gradient(135deg, rgba(212,165,116,0.05), transparent); }
+.dash-card:nth-child(2)::after { background: linear-gradient(135deg, rgba(107,143,113,0.05), transparent); }
+.dash-card:nth-child(3)::after { background: linear-gradient(135deg, rgba(74,111,165,0.05), transparent); }
+
+.dash-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.dash-card:hover::after { opacity: 1; }
+
+.dash-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.dash-card:nth-child(1) .dash-card-icon { background: var(--agent-o-bg); }
+.dash-card:nth-child(2) .dash-card-icon { background: var(--agent-e-bg); }
+.dash-card:nth-child(3) .dash-card-icon { background: var(--agent-c-bg); }
+
+.dash-card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.dash-card-desc {
+  font-size: 0.92rem;
+  color: var(--coffee);
+  line-height: 1.65;
+  margin-bottom: var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.dash-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+  z-index: 1;
+  transition: gap var(--duration) var(--ease-out);
+}
+
+.dash-card-action:hover { gap: 14px; }
+
+/* ─── Market Data ─── */
+.dash-market {
+  margin-top: var(--space-2xl);
+}
+
+.dash-market-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space-lg);
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.market-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(212,197,178,0.15);
+  transition: all var(--duration) var(--ease-out);
+}
+
+.market-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.market-card-company {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+.market-card-role {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space-sm);
+}
+
+.market-card-details {
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.82rem;
+  color: var(--coffee);
+}
+
+.market-card-salary {
+  font-weight: 600;
+  color: var(--success);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .dash-grid { grid-template-columns: 1fr; }
+}
